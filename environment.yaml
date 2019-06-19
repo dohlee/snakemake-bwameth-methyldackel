@@ -1,0 +1,10 @@
+name: bwameth-methyldackel
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - snakemake
+    - bwameth
+    - methyldackel
+    - sambamba

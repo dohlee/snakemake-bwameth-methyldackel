@@ -1,0 +1,107 @@
+manifest: 'manifest.csv'
+data_dir: '/data/project/dohoon/workbench/data'
+result_dir: '/data/project/dohoon/workbench/result'
+threads:
+    bwameth_index: 1  # This rule will not use more than 1 core.
+    bwameth_se: 8
+    bwameth_pe: 8
+    sambamba_sort_se: 6
+    sambamba_sort_pe: 6
+    sambamba_index_se: 6
+    sambamba_index_pe: 6
+    methyldackel_extract_se: 4
+    methyldackel_extract_pe: 4
+reference:
+    name: 'hg38'
+    fasta: '/data/project/dohoon/reference/hg38/hg38.fa'
+    bwameth_index: '/data/project/dohoon/reference/hg38/hg38.fa.bwameth.c2t'
+bwameth_se:
+    extra: ''
+    set_as_failed: False
+    interleaved: False
+bwameth_pe:
+    extra: ''
+    set_as_failed: False
+    interleaved: False
+sambamba_sort_se:
+    extra: ''
+    memory_limit: False
+    tmpdir: False
+    sort_by_name: False
+    compression_level: False
+    uncompressed_chunks: False
+    show_progress: False
+sambamba_sort_pe:
+    extra: ''
+    memory_limit: False
+    tmpdir: False
+    sort_by_name: False
+    compression_level: False
+    uncompressed_chunks: False
+    show_progress: False
+methyldackel_extract_se:
+    extra: ''
+    q: 10
+    p: 5
+    D: 2000
+    d: 1
+    r: False
+    l: False
+    keepStrand: False
+    chunkSize: 1000000
+    mergeContext: False
+    keepDupes: False
+    keepSingleton: False
+    keepDiscordant: False
+    ignoreFlags: False
+    requireFlags: False
+    noCpG: False
+    CHG: False
+    CHH: False
+    minOppositeDepth: False
+    maxVariantFrac: False
+    methylKit: False
+    cytosine_report: False
+    OT: False
+    OB: False
+    CTOT: False
+    CTOB: False
+    nOT: False
+    nOB: False
+    nCTOT: False
+    nCTOB: False
+    min_depth: 10
+    mapping_quality_threshold: 10
+    sequencing_quality_threshold: 5
+methyldackel_extract_pe:
+    extra: ''
+    q: 10
+    p: 5
+    D: 2000
+    d: 1
+    r: False
+    l: False
+    keepStrand: False
+    chunkSize: 1000000
+    mergeContext: False
+    opref: False
+    keepDupes: False
+    keepSingleton: False
+    keepDiscordant: False
+    ignoreFlags: False
+    requireFlags: False
+    noCpG: False
+    CHG: False
+    CHH: False
+    minOppositeDepth: False
+    maxVariantFrac: False
+    methylKit: False
+    cytosine_report: False
+    OT: False
+    OB: False
+    CTOT: False
+    CTOB: False
+    nOT: False
+    nOB: False
+    nCTOT: False
+    nCTOB: False
